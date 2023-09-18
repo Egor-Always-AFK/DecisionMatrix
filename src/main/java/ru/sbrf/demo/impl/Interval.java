@@ -10,7 +10,7 @@ public class Interval<Type extends Comparable<Type>> {
     }
 
     public boolean toRange(Type type) {
-        return (min.compareTo(type) >= 0) && (max.compareTo(type) <= 0);
+        return (min.compareTo(type) <= 0) && (max.compareTo(type) <= 0);
     }
 
 }

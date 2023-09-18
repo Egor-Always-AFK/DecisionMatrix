@@ -42,7 +42,7 @@ public class MyDecisionMatrixFactory<Decision> implements DecisionMatrixFactory 
     private Object castHelper(String value, Class<?> type) {
         if (type.isAssignableFrom(Interval.class)) {
             String[] interval = value.split("-");
-            return new Interval(Long.valueOf(interval[0]), Long.valueOf(interval[1]));
+            return new Interval(Long.valueOf(interval[0]), Long.valueOf(interval[1]));  // TODO: как отвязаться от каста в Long? И надо ли отвязываться от каста вообще..?
         } else if (type.isAssignableFrom(Long.class)) {
             return Long.valueOf(value);
         } else if (type.isAssignableFrom(String.class)) {
